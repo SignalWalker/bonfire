@@ -1,19 +1,18 @@
 {% extends "meta/base.html" %}
-{% block title %}{{ instance.name }}{% endblock title %}
+{% block title %}{{ instance.name }} - Forum Index{% endblock title %}
 {% block head %}
   {{ super() }}
-  <meta name="description" content="{{ instance.description }}" />
+  <meta name="description" content="Index of Bonfire forums accessible from this instance." />
   <link rel="icon" href="favicon.svg" type="image/x-icon" />
   <link rel="stylesheet" href="style.css" />
 {% endblock head %}
 {% block header %}{{ super() }}{% endblock header %}
 {% block nav %}{{ super() }}{% endblock nav %}
 {% block main %}
-  <p>{{ instance.description }}</p>
-  <p>Instance Versions:</p>
+  <p>Versions:</p>
   <ul>
-    <li>Bonfire      >> {{ instance.app_version }}</li>
-    <li>Bonfire-Core >> {{ instance.core_version }}</li>
+    <li>Bonfire      >> {{ app_version }}</li>
+    <li>Bonfire-Core >> {{ core_version }}</li>
   </ul>
 {% endblock main %}
 {% block aside %}{{ super() }}{% endblock aside %}

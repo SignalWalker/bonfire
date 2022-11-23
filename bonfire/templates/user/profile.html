@@ -1,20 +1,19 @@
 {% extends "meta/base.html" %}
-{% block title %}{{ instance.name }}{% endblock title %}
+{% block title %}{{ instance.name }} - User Profile - {{ user.name }}{% endblock title %}
 {% block head %}
   {{ super() }}
-  <meta name="description" content="{{ instance.description }}" />
+  <meta name="description" content="User profile of {{ user.name }}." />
   <link rel="icon" href="favicon.svg" type="image/x-icon" />
   <link rel="stylesheet" href="style.css" />
 {% endblock head %}
 {% block header %}{{ super() }}{% endblock header %}
 {% block nav %}{{ super() }}{% endblock nav %}
 {% block main %}
-  <p>{{ instance.description }}</p>
-  <p>Instance Versions:</p>
-  <ul>
-    <li>Bonfire      >> {{ instance.app_version }}</li>
-    <li>Bonfire-Core >> {{ instance.core_version }}</li>
-  </ul>
+<h2>{{ user.name }}</h2>
+  <dl>
+    <dt>Pronouns</dt>
+    <dd>She/They</dd>
+  </dl>
 {% endblock main %}
 {% block aside %}{{ super() }}{% endblock aside %}
 {% block footer %}{{ super() }}{% endblock footer %}

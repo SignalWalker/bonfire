@@ -7,14 +7,19 @@ authors = ["Ash Walker <ashurstwalker@gmail.com>"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-bonfire-lib = { path = "../bonfire-lib" }
+bonfire-core = { path = "../bonfire-core" }
+
 log = "^0.4"
-clap = "3.0.0-beta.4"
+clap = { version = "3.0.0-rc.8", features = ["cargo", "derive", "env", "wrap_help"] }
+
 actix-web = { version = "^3", features = ["openssl"] }
-openssl = { version = "0.10", features = ["v110"] }
-diesel = "^1"
-serde = "^1"
+openssl = { version = "0.10", features = ["v111"] }
+sea-orm = { version = "^0.4" }
+
+serde = { version = "^1", features = [ "derive" ] }
 tokio = { version = "^1", features = ["full"] }
-async-graphql = { version = "^2", features = [] }
-askama = { version = "^0.10", features = ["with-actix-web"] }
+async-graphql = { version = "^3", features = [] }
+
+tera = { version = "^1" }
+
 lazy_static = "^1"

@@ -1,5 +1,5 @@
 [package]
-name = "bonfire-lib"
+name = "bonfire-core"
 version = "0.1.0"
 edition = "2021"
 authors = ["Ash Walker <ashurstwalker@gmail.com>"]
@@ -9,3 +9,6 @@ authors = ["Ash Walker <ashurstwalker@gmail.com>"]
 [dependencies]
 log = "^0.4"
 ocappub = { path = "../ocappub-rs" }
+clap = { version = "3.0.0-rc.8", features = ["cargo", "derive", "env", "wrap_help"] }
+serde = { version = "^1", features = [ "derive" ] }
+lazy_static = "^1"

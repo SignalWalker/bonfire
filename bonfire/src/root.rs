@@ -1,13 +1,10 @@
-use askama::Template;
-use rocket::get;
 
 #[derive(Template)]
 #[template(path = "index.html")]
-pub struct IndexTemplate {
-    
-}
+pub struct IndexTemplate {}
 
 #[get("/")]
 pub fn root() -> IndexTemplate {
-    IndexTemplate { }
+    IndexTemplate {}
 }
+

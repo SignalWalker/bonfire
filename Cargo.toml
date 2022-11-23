@@ -1,2 +1,2 @@
 [workspace]
-members = ["bonfire-lib", "bonfire", "ocappub-rs", "captp-rs"]
+members = ["bonfire-core", "bonfire", "ocappub-rs", "captp-rs"]

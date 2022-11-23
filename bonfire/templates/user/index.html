@@ -1,19 +1,17 @@
 {% extends "meta/base.html" %}
-{% block title %}{{ instance.name }}{% endblock title %}
+{% block title %}{{ instance.name }} - User Index{% endblock title %}
 {% block head %}
   {{ super() }}
-  <meta name="description" content="{{ instance.description }}" />
+  <meta name="description" content="List of users local to this Bonfire instance." />
   <link rel="icon" href="favicon.svg" type="image/x-icon" />
   <link rel="stylesheet" href="style.css" />
 {% endblock head %}
 {% block header %}{{ super() }}{% endblock header %}
 {% block nav %}{{ super() }}{% endblock nav %}
 {% block main %}
-  <p>{{ instance.description }}</p>
-  <p>Instance Versions:</p>
+  <h2>User Profiles</h2>
   <ul>
-    <li>Bonfire      >> {{ instance.app_version }}</li>
-    <li>Bonfire-Core >> {{ instance.core_version }}</li>
+    <li>example@forum.example</li>
   </ul>
 {% endblock main %}
 {% block aside %}{{ super() }}{% endblock aside %}
