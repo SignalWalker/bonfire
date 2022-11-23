@@ -1,6 +1,6 @@
 # Bonfire
 
-A decentralized forum platform, based on ActivityPub.
+A peer-to-peer forum platform.
 
 ## Motivation
 
